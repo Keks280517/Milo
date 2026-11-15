@@ -1,0 +1,424 @@
+{
+  "model": "ministral-3:14b",
+  "date": "2026-10-13T15:06:39.084Z",
+  "base": {
+    "gpu": {
+      "memMiB": 1941,
+      "util": 4
+    },
+    "ramFreeMiB": 6231,
+    "ollamaRamMiB": 82
+  },
+  "memory": {
+    "numCtx": 8192,
+    "loadSeconds": 143.4,
+    "vramDeltaMiB": 10032,
+    "vramTotalUsedMiB": 11973,
+    "ollamaSizeMiB": 9096,
+    "ollamaSizeVramMiB": 9096,
+    "gpuShare": 100,
+    "ollamaRamDeltaMiB": -26,
+    "systemRamDeltaMiB": 896
+  },
+  "speed": {
+    "tokensPerSec": 45,
+    "firstWordMs": 118,
+    "gpuUtilAvg": 84,
+    "gpuUtilMax": 97,
+    "vramPeakMiB": null
+  },
+  "tools": {
+    "total": 25,
+    "toolOk": 23,
+    "fullyOk": 23,
+    "avgMs": 686
+  },
+  "speedRuns": [
+    {
+      "prompt": "Erkläre in etwa 120 Wörtern, warum der Himmel blau ist.",
+      "answer": "Der Himmel erscheint blau, weil das Sonnenlicht aus verschiedenen Farben (Spektralfarben) besteht, die durch die **Rayleigh-Streuung** in der Atmosphäre gestreut werden. Kurze Wellenlängen (wie Blau und Violett) werden stärker gestreut als lange (wie Rot oder Gelb). Da unsere Augen für Blau empfindlicher sind als für Violett, sehen wir vor allem **Blau**.\n\nAm Morgen/Abend wirkt der Himmel rötlich, weil das Licht einen längeren Weg durch die Atmosphäre zurücklegt – das Blau wird herausgestreut, und das restliche Licht (mit längeren Wellenlängen) dominiert. Ohne Atmosphäre (z. B. auf dem Mond) wäre der Himmel schwarz. 😊",
+      "thinkingChars": 0,
+      "firstWordMs": 150,
+      "tokensPerSec": 45.1,
+      "evalTokens": 160
+    },
+    {
+      "prompt": "Schreib mir eine kurze, höfliche Absage für eine Geburtstagseinladung am Samstag.",
+      "answer": "Hier ein Vorschlag für deine Absage:\n\n---\n**Betreff:** Absage zur Geburtstagseinladung\n\nLieber [Name],\n\nvielen Dank für die nette Einladung zu deinem Geburtstag! Leider muss ich am Samstag kurzfristig absagen, da ich bereits eine andere Verpflichtung habe.\n\nIch hoffe, du hast einen wunderbaren Tag und freue mich, dich bald einmal wiederzusehen!\n\nLiebe Grüße,\n[Dein Name]\n---\n\nMöchtest du die Nachricht per E-Mail oder Nachricht senden? Ich kann dir helfen, sie direkt zu versenden. 😊",
+      "thinkingChars": 0,
+      "firstWordMs": 76,
+      "tokensPerSec": 45,
+      "evalTokens": 134
+    },
+    {
+      "prompt": "Fasse in drei Sätzen zusammen, was ein Backup ist und warum man eines haben sollte.",
+      "answer": "Ein **Backup** ist eine Kopie deiner wichtigen Dateien, Einstellungen oder des gesamten Systems, die separat gespeichert wird, um Datenverlust zu verhindern.\n\nEs schützt vor **Hardwareausfällen, Viren, Löschfehlern oder Ransomware** und ermöglicht eine schnelle Wiederherstellung.\n\nOhne Backup können **Fotos, Dokumente oder Projekte unwiederbringlich verloren gehen** – ein Backup gibt dir Sicherheit und Ruhe.",
+      "thinkingChars": 0,
+      "firstWordMs": 128,
+      "tokensPerSec": 45,
+      "evalTokens": 96
+    }
+  ],
+  "toolRuns": [
+    {
+      "prompt": "Öffne Spotify",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Spotify"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 506
+    },
+    {
+      "prompt": "Starte bitte den Rechner",
+      "toolOk": false,
+      "argsOk": false,
+      "calls": [],
+      "content": "Ich bin ein Assistent auf einem bereits laufenden Windows-PC. Möchtest du stattdessen einen **Neustart** durchführen oder ein bestimmtes Programm öffnen? 😊",
+      "ms": 5105
+    },
+    {
+      "prompt": "Mach mal Discord auf",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Discord"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 286
+    },
+    {
+      "prompt": "Kannst du Steam starten?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Steam"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 294
+    },
+    {
+      "prompt": "Stell einen Timer auf 10 Minuten",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 600,
+            "label": "10 Minuten"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 557
+    },
+    {
+      "prompt": "Timer anderthalb Stunden für die Wäsche",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 5400,
+            "label": "Wäsche fertig"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 585
+    },
+    {
+      "prompt": "Weck mich in 45 Sekunden",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 45,
+            "label": "Wecker"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 498
+    },
+    {
+      "prompt": "Erinnere mich in 20 Minuten an die Pizza im Ofen",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 1200,
+            "label": "Pizza im Ofen"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 614
+    },
+    {
+      "prompt": "Merk dir: Der WLAN-Schlüssel vom Büro ist Sonne123",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "WLAN-Schlüssel Büro: Sonne123"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 494
+    },
+    {
+      "prompt": "Notiere, dass ich Freitag um 15 Uhr Zahnarzt habe",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "Zahnarzttermin am Freitag, 15 Uhr"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 540
+    },
+    {
+      "prompt": "Schreib auf: Milch, Eier und Brot kaufen",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "Einkaufsliste: Milch, Eier, Brot"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 588
+    },
+    {
+      "prompt": "Öffne YouTube",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_website",
+          "args": {
+            "url": "https://www.youtube.com"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 395
+    },
+    {
+      "prompt": "Geh auf netflix.com",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_website",
+          "args": {
+            "url": "https://www.netflix.com"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 427
+    },
+    {
+      "prompt": "Such auf YouTube nach Lofi Musik",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "browser_search",
+          "args": {
+            "query": "Lofi Musik",
+            "site": "youtube"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 488
+    },
+    {
+      "prompt": "Zeig mir bei Google Bilder von Corgis",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "browser_search",
+          "args": {
+            "query": "Corgis Bilder",
+            "site": "google"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 485
+    },
+    {
+      "prompt": "Wie wird das Wetter morgen in Hamburg?",
+      "toolOk": false,
+      "argsOk": false,
+      "calls": [],
+      "content": "web_research[ARGS]{\"query\": \"Wettervorhersage Hamburg 14. Oktober 2026\"}",
+      "ms": 622
+    },
+    {
+      "prompt": "Wer hat gestern Abend das Spiel von Bayern München gewonnen?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Ergebnis Bayern München Spiel 12. Oktober 2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 654
+    },
+    {
+      "prompt": "Was kostet die RTX 5060 Ti gerade?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Aktueller Preis RTX 5060 Ti 2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 699
+    },
+    {
+      "prompt": "Was gibt es heute Neues in den Nachrichten?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Aktuelle Nachrichten Deutschland 13. Oktober 2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 628
+    },
+    {
+      "prompt": "Pausiere die Musik",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "pause"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 279
+    },
+    {
+      "prompt": "Nächstes Lied",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "next"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 276
+    },
+    {
+      "prompt": "Mach lauter",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "volume_up"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 282
+    },
+    {
+      "prompt": "Wie geht's dir heute?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [],
+      "content": "Alles bestens, danke der Nachfrage! Ich bin bereit und freue mich, dir zu helfen. 😊 Was steht heute an?",
+      "ms": 766
+    },
+    {
+      "prompt": "Was ist die Hauptstadt von Frankreich?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [],
+      "content": "Die Hauptstadt von Frankreich ist **Paris**. 😊",
+      "ms": 312
+    },
+    {
+      "prompt": "Öffne Spotify und stell einen Timer auf 5 Minuten",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Spotify"
+          }
+        },
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 300,
+            "label": "5 Minuten"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 767
+    }
+  ]
+}

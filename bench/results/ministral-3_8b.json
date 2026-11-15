@@ -1,0 +1,416 @@
+{
+  "model": "ministral-3:8b",
+  "date": "2026-10-13T15:31:56.936Z",
+  "base": {
+    "gpu": {
+      "memMiB": 1926,
+      "util": 3,
+      "tempC": 47,
+      "watt": 21.28
+    },
+    "ramFreeMiB": 6577,
+    "ollamaRamMiB": 55
+  },
+  "memory": {
+    "numCtx": 8192,
+    "loadSeconds": 81.3,
+    "vramDeltaMiB": 6978,
+    "vramTotalUsedMiB": 8904,
+    "ollamaSizeMiB": 6046,
+    "ollamaSizeVramMiB": 6046,
+    "gpuShare": 100,
+    "ollamaRamDeltaMiB": 0,
+    "systemRamDeltaMiB": 876
+  },
+  "speed": {
+    "tokensPerSec": 70.5,
+    "firstWordMs": 83,
+    "firstWordAfterLoadMs": 159,
+    "gpuUtilAvg": 87,
+    "gpuUtilMax": 96,
+    "vramPeakMiB": 8943,
+    "tempStartC": 43,
+    "tempMaxC": 60,
+    "wattAvg": 124,
+    "wattMax": 143,
+    "fanMaxPercent": 0
+  },
+  "tools": {
+    "total": 25,
+    "toolOk": 21,
+    "fullyOk": 21,
+    "avgMs": 377
+  },
+  "speedRuns": [
+    {
+      "prompt": "Erkläre in etwa 120 Wörtern, warum der Himmel blau ist.",
+      "answer": "Der Himmel erscheint blau, weil das Sonnenlicht – das aus allen Farben des Spektrums besteht – auf die Erdatmosphäre trifft. Die kurzen Wellenlängen (v. a. Blau und Violett) werden durch **Rayleigh-Streuung** stärker gestreut als längere Wellen (Rot, Gelb). Obwohl violettes Licht noch stärker gestreut wird, nehmen wir den Himmel blau wahr, da unsere Augen für Blau empfindlicher sind und das menschliche Auge Violett weniger gut wahrnimmt.\n\nDie Streuung erfolgt in allen Richtungen, sodass das blaue Licht aus allen Himmelsrichtungen zu unseren Augen gelangt – der Himmel wirkt gleichmäßig blau. Bei Sonnenauf- oder -untergang dominieren Rot- und Orangetöne, weil das Licht einen längeren Weg durch die Atmosphäre zurücklegt und das Blaue stärker herausgestreut wird.",
+      "thinkingChars": 0,
+      "firstWordMs": 159,
+      "tokensPerSec": 69.2,
+      "evalTokens": 182
+    },
+    {
+      "prompt": "Schreib mir eine kurze, höfliche Absage für eine Geburtstagseinladung am Samstag.",
+      "answer": "Hier ein Vorschlag für deine Absage:\n\n---\n**Betreff:** Vielen Dank für die Einladung – leider muss ich absagen\n\nLiebe/r [Name],\n\nvielen Dank für die herzliche Einladung zu deinem Geburtstag! Leider muss ich diese schöne Gelegenheit aus [kurzer Grund, z. B. *„beruflichen Verpflichtungen“* / *„einer privaten Verpflichtung“*] absagen. Ich wünsche dir trotzdem einen wundervollen Tag und freue mich auf ein anderes Mal, um gemeinsam zu feiern!\n\nAlles Gute und bis bald,\n[Dein Name]\n---\n\nBrauchst du eine andere Formulierung oder möchtest ich dir helfen, den Grund anzupassen?",
+      "thinkingChars": 0,
+      "firstWordMs": 83,
+      "tokensPerSec": 71.4,
+      "evalTokens": 159
+    },
+    {
+      "prompt": "Fasse in drei Sätzen zusammen, was ein Backup ist und warum man eines haben sollte.",
+      "answer": "Ein **Backup** ist eine Kopie deiner wichtigen Daten, die du an einem sicheren Ort (z. B. externer Festplatte, Cloud oder Netzlaufwerk) speicherst, um sie im Schadensfall wiederherstellen zu können.\n\nOhne Backup riskierst du **Datenverlust** durch Hardware-Ausfälle, Viren, Löschfehler oder andere Katastrophen – oft mit irreparablen Folgen für Fotos, Dokumente oder Arbeitsdateien.\n\nEs ist die einfachste und kostengünstigste Versicherung gegen teure oder emotionale Verluste. **Regelmäßige Backups** (z. B. automatisiert) sind daher Pflicht für jeden PC-Nutzer.",
+      "thinkingChars": 0,
+      "firstWordMs": 59,
+      "tokensPerSec": 70.9,
+      "evalTokens": 149
+    }
+  ],
+  "toolRuns": [
+    {
+      "prompt": "Öffne Spotify",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Spotify"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 379
+    },
+    {
+      "prompt": "Starte bitte den Rechner",
+      "toolOk": false,
+      "argsOk": false,
+      "calls": [],
+      "content": "Ich starte den Rechner für dich. Möchtest du ihn neu starten oder nur einschalten?",
+      "ms": 377
+    },
+    {
+      "prompt": "Mach mal Discord auf",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Discord"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 211
+    },
+    {
+      "prompt": "Kannst du Steam starten?",
+      "toolOk": false,
+      "argsOk": false,
+      "calls": [],
+      "content": "Ich kann Steam nicht direkt starten, aber ich kann dir zeigen, wie du es selbst öffnest. Möchtest du, dass ich dir den Pfad zu Steam zeige oder eine andere Hilfe brauchst? Alternativ kann ich auch eine andere App für dich öffnen, wenn du möchtest. Sag einfach Bescheid! 😊",
+      "ms": 1047
+    },
+    {
+      "prompt": "Stell einen Timer auf 10 Minuten",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 600,
+            "label": "10 Minuten Timer"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 367
+    },
+    {
+      "prompt": "Timer anderthalb Stunden für die Wäsche",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 5400,
+            "label": "Wäsche"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 358
+    },
+    {
+      "prompt": "Weck mich in 45 Sekunden",
+      "toolOk": false,
+      "argsOk": false,
+      "calls": [],
+      "content": "Ich kann keine Weckfunktion direkt auf deinem PC einrichten, aber ich kann einen Timer für dich stellen. Soll ich einen Timer auf 45 Sekunden stellen?",
+      "ms": 544
+    },
+    {
+      "prompt": "Erinnere mich in 20 Minuten an die Pizza im Ofen",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 1200,
+            "label": "Pizza im Ofen"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 388
+    },
+    {
+      "prompt": "Merk dir: Der WLAN-Schlüssel vom Büro ist Sonne123",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "WLAN-Schlüssel Büro: Sonne123"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 319
+    },
+    {
+      "prompt": "Notiere, dass ich Freitag um 15 Uhr Zahnarzt habe",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "Freitag, 15:00 Uhr – Zahnarzttermin"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 440
+    },
+    {
+      "prompt": "Schreib auf: Milch, Eier und Brot kaufen",
+      "toolOk": false,
+      "argsOk": false,
+      "calls": [],
+      "error": "Error: /api/chat -> 500: {\"error\":\"invalid character '*' looking for beginning of value\"}"
+    },
+    {
+      "prompt": "Öffne YouTube",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_website",
+          "args": {
+            "url": "https://www.youtube.com"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 264
+    },
+    {
+      "prompt": "Geh auf netflix.com",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_website",
+          "args": {
+            "url": "https://www.netflix.com"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 277
+    },
+    {
+      "prompt": "Such auf YouTube nach Lofi Musik",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "browser_search",
+          "args": {
+            "query": "Lofi Musik",
+            "site": "youtube"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 296
+    },
+    {
+      "prompt": "Zeig mir bei Google Bilder von Corgis",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "browser_search",
+          "args": {
+            "query": "Corgis",
+            "site": "google"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 267
+    },
+    {
+      "prompt": "Wie wird das Wetter morgen in Hamburg?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Wettervorhersage Hamburg 14.10.2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 437
+    },
+    {
+      "prompt": "Wer hat gestern Abend das Spiel von Bayern München gewonnen?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Gewinner FC Bayern München Spiel 12.10.2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 432
+    },
+    {
+      "prompt": "Was kostet die RTX 5060 Ti gerade?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "RTX 5060 Ti aktueller Preis Oktober 2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 420
+    },
+    {
+      "prompt": "Was gibt es heute Neues in den Nachrichten?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Aktuelle Nachrichten Deutschland und Welt 13. Oktober 2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 426
+    },
+    {
+      "prompt": "Pausiere die Musik",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "pause"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 186
+    },
+    {
+      "prompt": "Nächstes Lied",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "next"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 187
+    },
+    {
+      "prompt": "Mach lauter",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "volume_up"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 200
+    },
+    {
+      "prompt": "Wie geht's dir heute?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [],
+      "content": "Danke der Nachfrage! Mir geht es hervorragend – ich bin bereit, dir bei allem zu helfen! Und wie geht es dir heute? 😊",
+      "ms": 515
+    },
+    {
+      "prompt": "Was ist die Hauptstadt von Frankreich?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [],
+      "content": "Die Hauptstadt von Frankreich ist **Paris**. 😊",
+      "ms": 205
+    },
+    {
+      "prompt": "Öffne Spotify und stell einen Timer auf 5 Minuten",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Spotify"
+          }
+        },
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 300,
+            "label": "Spotify-Pause"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 510
+    }
+  ]
+}

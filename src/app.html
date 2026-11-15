@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Milo</title>
+    <script>
+      // Einmaliger Umzug: Einstellungen der Oberflaeche hiessen bis Version 0.4 "kubo.*".
+      // Laeuft vor allen Modulen, damit jedes schon die neuen Schluessel liest.
+      try {
+        for (const key of Object.keys(localStorage)) {
+          if (!key.startsWith("kubo.")) continue;
+          const next = "milo." + key.slice(5);
+          if (localStorage.getItem(next) === null) localStorage.setItem(next, localStorage.getItem(key));
+          localStorage.removeItem(key);
+        }
+      } catch {}
+    </script>
+    %sveltekit.head%
+  </head>
+  <body>
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>

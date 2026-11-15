@@ -1,0 +1,9 @@
+{
+  "name": "milo-stt-bench",
+  "private": true,
+  "type": "module",
+  "description": "Vergleich lokaler Spracherkenner fuer Milo (nur Testwerkzeug, nicht Teil der App)",
+  "dependencies": {
+    "sherpa-onnx-node": "1.13.8"
+  }
+}

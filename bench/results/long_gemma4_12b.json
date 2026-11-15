@@ -1,0 +1,19 @@
+{
+  "model": "gemma4:12b",
+  "seconds": 65.8,
+  "tokens": 4800,
+  "idle": {
+    "memMiB": 11127,
+    "util": 3,
+    "tempC": 46,
+    "watt": 26.78
+  },
+  "gpuUtilAvg": 92,
+  "gpuUtilMax": 95,
+  "vramPeakMiB": 11173,
+  "tempStartC": 46,
+  "tempMaxC": 71,
+  "wattAvg": 169,
+  "wattMax": 176,
+  "fanMaxPercent": 42
+}

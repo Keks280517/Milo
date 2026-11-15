@@ -1,0 +1,249 @@
+{
+  "summary": {
+    "model": "qwen3:8b",
+    "commands": "71/87",
+    "commandsAlwaysRight": "23/29",
+    "grounded": "9/12",
+    "percent": 81
+  },
+  "cases": [
+    {
+      "prompt": "In einer Viertelstunde muss ich los, sag mir Bescheid",
+      "ok": 0,
+      "of": 3,
+      "fails": [
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":1500,\"label\":\"Losgehen\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":1500,\"label\":\"Losgehen\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":1500,\"label\":\"Losgehen in 15 Minuten\"}}]"
+      ]
+    },
+    {
+      "prompt": "Timer zwei Minuten dreißig",
+      "ok": 0,
+      "of": 3,
+      "fails": [
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":120,\"label\":\"Timer zwei Minuten dreißig\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":120,\"label\":\"Timer zwei Minuten dreißig\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":120,\"label\":\"Timer zwei Minuten dreißig\"}}]"
+      ]
+    },
+    {
+      "prompt": "stell n timer auf fünf minuten",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Erinnere mich um 18 Uhr ans Training",
+      "ok": 0,
+      "of": 3,
+      "fails": [
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":7200,\"label\":\"Training um 18 Uhr\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":7200,\"label\":\"Training um 18 Uhr\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"label\":\"Training\",\"duration_seconds\":7200}}]"
+      ]
+    },
+    {
+      "prompt": "Ich brauch mal den Taschenrechner",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Öffne den Explorer",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "öffne spotifei",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Kannst du mir kurz Discord launchen",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Starte Word und Excel",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Zeig mir die Seite von der Tagesschau",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Geh mal auf Gmail",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Spiel was auf YouTube ab, irgendwas mit Jazz",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Such bei YouTube Minecraft Tutorials raus",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Leiser bitte",
+      "ok": 1,
+      "of": 3,
+      "fails": [
+        "Die Lautstärke wird reduziert.",
+        "Die Lautstärke wird reduziert."
+      ]
+    },
+    {
+      "prompt": "Mach weiter mit der Musik",
+      "ok": 1,
+      "of": 3,
+      "fails": [
+        "[{\"index\":0,\"name\":\"media_control\",\"arguments\":{\"action\":\"next\"}}]",
+        "[{\"index\":0,\"name\":\"media_control\",\"arguments\":{\"action\":\"next\"}}]"
+      ]
+    },
+    {
+      "prompt": "Das Lied davor nochmal",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Vergiss nicht: Mama hat am 3. November Geburtstag",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Speicher dir meine Schuhgröße, 44",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Schreib mir auf dass der Vermieter Herr Öztürk heißt",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wer ist aktuell Bundeskanzler?",
+      "ok": 0,
+      "of": 3,
+      "fails": [
+        "Der aktuelle Bundeskanzler der Bundesrepublik Deutschland ist Olaf Scholz.",
+        "Der aktuelle Bundeskanzler ist Olaf Scholz.",
+        "Der aktuelle Bundeskanzler der Bundesrepublik Deutschland ist Olaf Scholz."
+      ]
+    },
+    {
+      "prompt": "Wann kommt GTA 6 raus?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wie ist der aktuelle Bitcoin-Kurs?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Was läuft heute Abend im Fernsehen?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wie viel ist 17 mal 23?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wie spät ist es?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Welcher Wochentag ist heute?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Erzähl mir einen kurzen Witz",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Was hältst du von Pizza?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Danke dir, das wars",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    }
+  ],
+  "grounded": [
+    {
+      "question": "Wie wird das Wetter morgen in Hamburg?",
+      "ok": 0,
+      "of": 3,
+      "answers": [
+        "Morgen, Mittwoch, 14. Oktober 2026, wird es in Hamburg tagsüber 12 °C und nachts 7 °C. Es regnet anhaltend, und der Wind kommt aus West mit 25 km/h.",
+        "Morgen, Mittwoch, 14. Oktober 2026, wird es in Hamburg tagsüber 12 °C und nachts 7 °C. Es regnet anhaltend, und der Wind weht aus West mit 25 km/h.",
+        "Morgen, Mittwoch, 14. Oktober 2026, wird es in Hamburg tagsüber 12 °C und nachts 7 °C. Es regnet anhaltend, und der Wind weht aus West mit 25 km/h."
+      ]
+    },
+    {
+      "question": "Was kostet die RTX 5060 Ti gerade?",
+      "ok": 3,
+      "of": 3,
+      "answers": [
+        "Leider konnte ich keine aktuellen Preise für die RTX 5060 Ti finden. Die Grafikkarte ist möglicherweise noch nicht auf dem Markt oder die Preise sind nicht öffentlich bekannt. Schau mal auf Gaming-Portale oder im Online-Handel nach, um aktuelle Angebote zu finden.",
+        "Leider konnte ich keine aktuellen Preise für die RTX 5060 Ti finden. Die Karteikarte ist möglicherweise noch nicht auf dem Markt oder die Preise sind nicht öffentlich bekannt. Schau mal auf Gaming-Websites oder bei Händlern wie Amazon, Newegg oder TechPowerUp, um aktuelle Informationen zu erhalten.",
+        "Leider konnte ich keine aktuellen Preise für die RTX 5060 Ti finden. Die Grafikkarte ist möglicherweise noch nicht auf dem Markt oder die Preise sind nicht öffentlich bekannt. Schau mal auf Gaming-Portale oder in Online-Shops wie Amazon, Newegg oder TechPowerUp für aktuelle Informationen."
+      ]
+    },
+    {
+      "question": "Stell einen Timer auf 10 Minuten",
+      "ok": 3,
+      "of": 3,
+      "answers": [
+        "Dein Timer läuft bis um 16:40 Uhr. Viel Erfolg! 😊",
+        "Dein Timer läuft bis um 16:40 Uhr. Viel Erfolg! 😊",
+        "Dein Timer läuft bis um 16:40 Uhr. Viel Erfolg!"
+      ]
+    },
+    {
+      "question": "Wer hat das Spiel gestern gewonnen, Dortmund oder Bayern?",
+      "ok": 3,
+      "of": 3,
+      "answers": [
+        "Das Spiel gestern zwischen Borussia Dortmund und FC Bayern München wurde von Bayern München gewonnen. Das Endresultat war 2:3 in Favor von Bayern.",
+        "Das Spiel gestern zwischen Borussia Dortmund und FC Bayern München wurde von Bayern München gewonnen mit 3:2.",
+        "Das Spiel gestern zwischen Borussia Dortmund und FC Bayern München wurde von Bayern München gewonnen mit 3:2."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "model": "qwen3:8b",
+  "date": "2026-10-13T15:30:11.072Z",
+  "base": {
+    "gpu": {
+      "memMiB": 1969,
+      "util": 2,
+      "tempC": 47,
+      "watt": 25.62
+    },
+    "ramFreeMiB": 6456,
+    "ollamaRamMiB": 55
+  },
+  "memory": {
+    "numCtx": 8192,
+    "loadSeconds": 73.4,
+    "vramDeltaMiB": 6137,
+    "vramTotalUsedMiB": 8106,
+    "ollamaSizeMiB": 6004,
+    "ollamaSizeVramMiB": 6004,
+    "gpuShare": 100,
+    "ollamaRamDeltaMiB": -1,
+    "systemRamDeltaMiB": 946
+  },
+  "speed": {
+    "tokensPerSec": 74.4,
+    "firstWordMs": 69,
+    "firstWordAfterLoadMs": 95,
+    "gpuUtilAvg": 86,
+    "gpuUtilMax": 98,
+    "vramPeakMiB": 8144,
+    "tempStartC": 48,
+    "tempMaxC": 64,
+    "wattAvg": 117,
+    "wattMax": 147,
+    "fanMaxPercent": 30
+  },
+  "tools": {
+    "total": 25,
+    "toolOk": 24,
+    "fullyOk": 24,
+    "avgMs": 406
+  },
+  "speedRuns": [
+    {
+      "prompt": "Erkläre in etwa 120 Wörtern, warum der Himmel blau ist.",
+      "answer": "Der Himmel erscheint blau, weil die Luft in der Atmosphäre das Licht der Sonne stärker in der Blau- als in den anderen Farben brechen lässt. Dieser Effekt nennt sich Rayleigh-Streuung. Das Sonnenlicht besteht aus verschiedenen Farben, jede mit unterschiedlicher Wellenlänge. Die kurzwelligeren Farben wie Blau und Violett werden stärker in die Luft gestreut. Obwohl das Sonnenlicht auch Violett enthält, wirkt das Auge aufgrund der höheren Intensität des Blaulichts und der Absorption von Violett durch die Atmosphäre den Himmel blau. Diese Streuung ist am stärksten in der Nähe der Sonne und wird intensiver, wenn die Sonne niedriger am Himmel steht, was den Himmel am Morgen und Abend rötlich erscheinen lässt.",
+      "thinkingChars": 0,
+      "firstWordMs": 95,
+      "tokensPerSec": 73.5,
+      "evalTokens": 199
+    },
+    {
+      "prompt": "Schreib mir eine kurze, höfliche Absage für eine Geburtstagseinladung am Samstag.",
+      "answer": "Sehr geehrte(r) [Name],  \n\nvielen Dank für die Einladung zu Ihrem Geburtstag! Leider kann ich am Samstag nicht teilnehmen. Ich wünsche Ihnen einen wundervollen Tag und viel Freude!  \n\nMit freundlichen Grüßen,  \nMilo",
+      "thinkingChars": 0,
+      "firstWordMs": 69,
+      "tokensPerSec": 74.9,
+      "evalTokens": 63
+    },
+    {
+      "prompt": "Fasse in drei Sätzen zusammen, was ein Backup ist und warum man eines haben sollte.",
+      "answer": "Ein Backup ist eine Sicherungskopie wichtiger Daten. Es schützt vor Verlust durch Viren, technische Probleme oder versehentliche Löschungen. Ein Backup gewährleistet, dass Daten im Notfall wiederhergestellt werden können.",
+      "thinkingChars": 0,
+      "firstWordMs": 41,
+      "tokensPerSec": 74.9,
+      "evalTokens": 58
+    }
+  ],
+  "toolRuns": [
+    {
+      "prompt": "Öffne Spotify",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Spotify"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 469
+    },
+    {
+      "prompt": "Starte bitte den Rechner",
+      "toolOk": false,
+      "argsOk": false,
+      "calls": [],
+      "content": "Der Rechner ist bereits gestartet. Möchtest du etwas anderes?",
+      "ms": 281
+    },
+    {
+      "prompt": "Mach mal Discord auf",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Discord"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 319
+    },
+    {
+      "prompt": "Kannst du Steam starten?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Steam"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 314
+    },
+    {
+      "prompt": "Stell einen Timer auf 10 Minuten",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 600,
+            "label": "10 Minuten"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 459
+    },
+    {
+      "prompt": "Timer anderthalb Stunden für die Wäsche",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 5400,
+            "label": "Wäsche"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 466
+    },
+    {
+      "prompt": "Weck mich in 45 Sekunden",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 45,
+            "label": "Weckruf"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 454
+    },
+    {
+      "prompt": "Erinnere mich in 20 Minuten an die Pizza im Ofen",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 1200,
+            "label": "Pizza im Ofen"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 495
+    },
+    {
+      "prompt": "Merk dir: Der WLAN-Schlüssel vom Büro ist Sonne123",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "Der WLAN-Schlüssel vom Büro ist Sonne123"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 496
+    },
+    {
+      "prompt": "Notiere, dass ich Freitag um 15 Uhr Zahnarzt habe",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "Freitag um 15 Uhr Zahnarzt"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 438
+    },
+    {
+      "prompt": "Schreib auf: Milch, Eier und Brot kaufen",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "save_note",
+          "args": {
+            "text": "Milch, Eier und Brot kaufen"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 422
+    },
+    {
+      "prompt": "Öffne YouTube",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_website",
+          "args": {
+            "url": "https://www.youtube.com"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 351
+    },
+    {
+      "prompt": "Geh auf netflix.com",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_website",
+          "args": {
+            "url": "https://www.netflix.com"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 370
+    },
+    {
+      "prompt": "Such auf YouTube nach Lofi Musik",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "browser_search",
+          "args": {
+            "query": "Lofi Musik",
+            "site": "youtube"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 411
+    },
+    {
+      "prompt": "Zeig mir bei Google Bilder von Corgis",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "browser_search",
+          "args": {
+            "query": "Corgis",
+            "site": "google"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 422
+    },
+    {
+      "prompt": "Wie wird das Wetter morgen in Hamburg?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Wetter morgen Hamburg"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 376
+    },
+    {
+      "prompt": "Wer hat gestern Abend das Spiel von Bayern München gewonnen?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Bayern München Spielgewinn gestern Abend"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 445
+    },
+    {
+      "prompt": "Was kostet die RTX 5060 Ti gerade?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Preis RTX 5060 Ti 2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 518
+    },
+    {
+      "prompt": "Was gibt es heute Neues in den Nachrichten?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "web_research",
+          "args": {
+            "query": "Neueste Nachrichten vom 13. Oktober 2026"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 525
+    },
+    {
+      "prompt": "Pausiere die Musik",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "pause"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 306
+    },
+    {
+      "prompt": "Nächstes Lied",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "next"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 337
+    },
+    {
+      "prompt": "Mach lauter",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "media_control",
+          "args": {
+            "action": "volume_up"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 317
+    },
+    {
+      "prompt": "Wie geht's dir heute?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [],
+      "content": "Alles gut, danke! Wie kann ich dir heute helfen? 😊",
+      "ms": 267
+    },
+    {
+      "prompt": "Was ist die Hauptstadt von Frankreich?",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [],
+      "content": "Die Hauptstadt von Frankreich ist Paris.",
+      "ms": 169
+    },
+    {
+      "prompt": "Öffne Spotify und stell einen Timer auf 5 Minuten",
+      "toolOk": true,
+      "argsOk": true,
+      "calls": [
+        {
+          "name": "open_app",
+          "args": {
+            "name": "Spotify"
+          }
+        },
+        {
+          "name": "set_timer",
+          "args": {
+            "duration_seconds": 300,
+            "label": "5 Minuten"
+          }
+        }
+      ],
+      "content": "",
+      "ms": 729
+    }
+  ]
+}

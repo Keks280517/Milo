@@ -1,0 +1,17 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Rechte der Insel und des Ausflugsfensters",
+  "windows": [
+    "overlay",
+    "pet",
+    "widget-*",
+    "settings",
+    "desk"
+  ],
+  "permissions": [
+    "core:default",
+    "opener:default",
+    "drag:default"
+  ]
+}

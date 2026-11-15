@@ -1,0 +1,253 @@
+/* Gemeinsame Grundlage fuer alle Fenster: Schrift, Raum, Radien, Hoehen, Glas und Bewegung.
+ *
+ * Glas nach Apples Liquid-Glass-Leitlinien: es ist die Ebene fuer Bedienelemente und Navigation,
+ * die ueber dem Inhalt schwebt (Leiste, Menues, Knoepfe), nicht der Inhalt selbst. Inhalt liegt
+ * auf ruhigen, dunklen Flaechen. Glas ist klar statt milchig: es bricht den Inhalt nur am Rand
+ * (GlassDefs.svelte rechnet die Linse je Form), traegt eine Glanzkante aus EINER Lichtrichtung
+ * (oben links) und wirft einen weichen Schatten. Alle Werte hier sind die einzige Quelle; die
+ * Ansichten benutzen nur noch die Variablen. */
+
+:root {
+  --font-sans: "Inter Variable", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "Cascadia Mono", Consolas, ui-monospace, monospace;
+
+  /* ---------- Schrift: acht Stufen, vier Staerken ---------- */
+  --fs-caption: 11px;   /* Beschriftung, Einheit, Zeitstempel */
+  --fs-footnote: 12px;  /* Nebentext, Hinweise */
+  --fs-body: 13px;      /* Fliesstext, Zeilen, Knoepfe */
+  --fs-callout: 15px;   /* Abschnitt, betonte Zeile */
+  --fs-headline: 17px;  /* Kartentitel */
+  --fs-title: 22px;     /* Titel einer Ansicht */
+  --fs-large: 28px;     /* grosser Titel */
+  --fs-display: 34px;   /* Zahl oder Titel als Blickfang */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  /* Grosse Schrift laeuft enger, kleine minimal weiter (wie optische Groessen). */
+  --tr-display: -0.028em;
+  --tr-title: -0.02em;
+  --tr-headline: -0.012em;
+  --tr-caption: 0.005em;
+
+  /* ---------- Farbe ---------- */
+  --text: #f5f5f7;
+  --text-2: #c9c9cf;
+  --text-3: #a1a1a8;
+  --text-4: #86868d;   /* schwaechste Stufe, auf Inselschwarz noch ueber 4,5:1 */
+  --accent: #64d2ff;
+  --focus: #64d2ff;
+  --ok: #30d158;
+  --warn: #ffd60a;
+  --bad: #ff453a;
+
+  /* Inhaltsflaechen (keine Glaswirkung, nur Abstufungen auf Schwarz). */
+  --ink: #050506;
+  --surface-1: #0e0e10;
+  --surface-2: #161618;
+  --surface-3: #1f1f22;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --line: rgba(255, 255, 255, 0.08);
+
+  /* ---------- Raum: Vierer-Raster ---------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  /* Rand jeder Ansicht zur Insel. */
+  --gutter: 16px;
+
+  /* ---------- Radien: ineinander passend (aussen = innen + Abstand) ---------- */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-full: 999px;
+
+  /* ---------- Hoehe: drei Stufen ---------- */
+  --lift-1: 0 1px 1px rgba(0, 0, 0, 0.22), 0 4px 12px -4px rgba(0, 0, 0, 0.4);
+  --lift-2: 0 1px 2px rgba(0, 0, 0, 0.26), 0 12px 28px -8px rgba(0, 0, 0, 0.55);
+  --lift-3: 0 2px 4px rgba(0, 0, 0, 0.3), 0 28px 60px -12px rgba(0, 0, 0, 0.7);
+
+  /* ---------- Bewegung: vier Dauern, zwei Kurven ---------- */
+  --t-fast: 140ms;
+  --t-base: 220ms;
+  --t-slow: 420ms;
+  --t-spring: 560ms;
+  /* Federkurve (leichtes Ueberschwingen, ruhiges Ausklingen) und ein ruhiges Abbremsen. */
+  --ease-spring: linear(0, 0.006, 0.025 2.8%, 0.101 6.1%, 0.539 18.9%, 0.721 25.3%, 0.849 31.5%, 0.937 38.1%, 0.968 41.8%, 0.991 45.7%, 1.006 50.1%, 1.015 55%, 1.017 63.9%, 1.001);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ---------- Glas ---------- */
+  /* Klar: wenig Eigenfarbe, wenig Unschaerfe. Die Lesbarkeit kommt aus dem dunklen Schleier,
+     nicht aus Milchigkeit. */
+  --glass-fill: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 42%, rgba(255, 255, 255, 0.055) 100%), rgba(22, 22, 28, 0.42);
+  --glass-blur: blur(3px) saturate(185%) brightness(1.06);
+  /* Koerper des Glases: Glanz oben, Gegenschein unten, etwas Volumen, unten ein dunkler Kern. */
+  --glass-edge:
+    inset 0 1px 0.5px rgba(255, 255, 255, 0.34),
+    inset 0 -1px 0.5px rgba(255, 255, 255, 0.1),
+    inset 0 0 12px rgba(255, 255, 255, 0.045),
+    inset 0 -10px 14px -12px rgba(0, 0, 0, 0.5);
+  --glass-lift: var(--lift-2);
+  /* Glanzkante rundum: hell oben links, ein zweites Aufblitzen unten rechts (eine Lichtquelle). */
+  --glass-rim: conic-gradient(
+    from 270deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.72) 11%,
+    rgba(255, 255, 255, 0.26) 24%,
+    rgba(255, 255, 255, 0.05) 40%,
+    rgba(255, 255, 255, 0.05) 52%,
+    rgba(255, 255, 255, 0.36) 62%,
+    rgba(255, 255, 255, 0.05) 76%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  /* Breite des brechenden Rands und Staerke der Brechung (liest GlassDefs.svelte). */
+  --glass-band: 16;
+  --glass-bend: 26;
+  --glass-split: 1;
+
+  /* Inhaltsflaechen aller Ansichten: dunkles, leicht aufgehelltes Material mit feiner Oberkante.
+     (Echtes Glas bleibt den Bedienelementen vorbehalten, siehe .glass.) */
+  --card: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.032));
+  --card-edge: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 0 0.5px rgba(255, 255, 255, 0.06), var(--lift-1);
+  --well: rgba(255, 255, 255, 0.055);
+  --chip: rgba(255, 255, 255, 0.09);
+  --chip-strong: rgba(255, 255, 255, 0.15);
+}
+
+.glass {
+  position: relative;
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-edge), var(--glass-lift);
+}
+
+/* Glanzlicht: ein weicher Schein aus der Lichtrichtung plus ein Licht, das dem Mauszeiger folgt
+   (--mx, --my, --lit setzt GlassDefs.svelte). */
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(160px circle at var(--mx, 30%) var(--my, 0%), rgb(255 255 255 / calc(0.14 * var(--lit, 0))), transparent 62%),
+    radial-gradient(120% 90% at 12% -20%, rgba(255, 255, 255, 0.13), transparent 52%);
+  transition: background var(--t-fast) linear;
+}
+
+/* Glanzkante: ein Haarstrich rundum, dessen Helligkeit der Lichtrichtung folgt. */
+.glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: var(--glass-rim);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
+/* Glasstaerke aus den Einstellungen: matt (deckend, keine Brechung) oder besonders klar. */
+:root[data-glass="0"] {
+  --glass-fill: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.045)), rgba(28, 28, 32, 0.94);
+  --glass-blur: blur(28px) saturate(120%);
+  --glass-bend: 0;
+}
+:root[data-glass="2"] {
+  --glass-fill: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 42%, rgba(255, 255, 255, 0.05) 100%), rgba(22, 22, 28, 0.24);
+  --glass-blur: blur(1.5px) saturate(200%) brightness(1.08);
+  --glass-bend: 34;
+}
+
+/* Weniger Bewegung: Federn und Uebergaenge fallen weg. */
+:root.reduce-motion *,
+:root.reduce-motion *::before,
+:root.reduce-motion *::after {
+  animation-duration: 1ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 1ms !important;
+}
+
+/* ---------- Gleitende Linse (lens.ts): markiert in Leisten und Umschaltern die Auswahl ---------- */
+.lens-host {
+  position: relative;
+}
+.lens-thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--lens-w, 0px);
+  height: var(--lens-h, 0px);
+  transform: translate(var(--lens-x, 0px), var(--lens-y, 0px));
+  border-radius: var(--lens-r, var(--r-full));
+  pointer-events: none;
+  opacity: var(--lens-on, 0);
+  transition:
+    transform var(--t-spring) var(--ease-spring),
+    width var(--t-spring) var(--ease-spring),
+    height var(--t-base) var(--ease-out),
+    opacity var(--t-base) ease;
+}
+.lens-host[data-lens-still] .lens-thumb {
+  transition: none;
+}
+
+/* Daumen eines Umschalters: ein helles Stueck Glas, das zur Auswahl gleitet. */
+.lens-thumb.pick {
+  z-index: 0;
+  background: linear-gradient(180deg, #fff, #e6e6ec);
+  box-shadow: inset 0 1px 0 #fff, 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 10px -2px rgba(0, 0, 0, 0.45);
+}
+
+/* Baustein auf dem Weg ins Widget (Widget-Ersteller); haengt direkt am Dokument. */
+.fly-chip {
+  position: fixed;
+  z-index: 50;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--s-3);
+  border-radius: var(--r-md);
+  background: var(--glass-fill);
+  box-shadow: var(--glass-edge), var(--lift-2);
+  color: var(--text);
+  font: var(--fw-semibold) var(--fs-body) var(--font-sans);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Sichtbarer Fokus fuer alle Eingaben (einige Felder setzen outline: 0 fuer den Mausklick). */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--focus) !important;
+  outline-offset: -1px;
+}
+
+/* Auswahlfelder ueberall: eigene Pfeile statt des Standard-Kaestchens (die Liste selbst bleibt
+   die des Systems, dunkel durch color-scheme). */
+/* color-scheme nur an den Feldern, NICHT an :root: dort wuerde es den durchsichtigen Fenstern
+   (Insel, Desktop-Ebene, Widgets) einen dunklen Grund geben. */
+select,
+input,
+textarea {
+  color-scheme: dark;
+}
+select {
+  appearance: none;
+  padding-right: 26px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5 6.5l3-3 3 3M5 9.5l3 3 3-3' fill='none' stroke='%23c9c9cf' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 7px center !important;
+  background-size: 13px !important;
+}

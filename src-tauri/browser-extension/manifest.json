@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Milo für den Browser",
+  "version": "1.1.0",
+  "description": "Lässt Milo Seiten lesen, Titel finden und anklicken. Spricht nur mit Milo auf deinem PC, nie mit dem Internet.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyDHqNkJGdQfnHJz4hXrRympV9Chub+w8ru7kxx1mbA639+NSbsMlzQ2eCKQcdqR3GsnsznE7G4AUt50RHJeK3msP9mF6bj/A5iVREbA4dLk7jfmgUaAutXrl5d/lnd2KsnRlakka1SwOiJAbXbcQg1DT4wWov6NYmhMpBFsjec3sWrxQnOgsDQUFgzD4B/nAmk6lsixPkF9rk8taDUybcESv0nkXrDmKMwpjYSJuz8IXpAr9gwJoVCmRt1dY+cum3v9jABKMwlabv8HiQefuI/5yExQ52HuYnV5YwX+M6xCb/UXYYHS2LIP44Kjk6cLe4zEqzmtttNeB+kbgBBsL0QIDAQAB",
+  "permissions": ["nativeMessaging", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "minimum_chrome_version": "110"
+}

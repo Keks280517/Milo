@@ -1,0 +1,13 @@
+{
+  "_hinweis": "Zulaessige Abweichungen vom Vorlesetext. Aufgenommen, wo alle Erkenner uebereinstimmend dasselbe gehoert haben (der Sprecher hat also leicht anders formuliert) oder wo nur die Schreibweise eines Namens abweicht. Gewertet wird die Variante mit den wenigsten Fehlern.",
+  "8": ["Suche auf YouTube nach Lofi Musik zum Lernen."],
+  "10": ["Erinner mich in zwanzig Minuten an die Pizza im Ofen."],
+  "13": ["Mache einen Screenshot und erkläre mir, was du siehst.", "Mach einen Screenshot und erkläre mir, was du siehst."],
+  "14": ["Schreib mir ein kleines Skript, das den PC in einer halben Stunde herunterfährt."],
+  "15": [
+    "Ich habe gestern mit Jonas und Aileen über das neue Projekt gesprochen.",
+    "Ich habe gestern mit Jonas und Eileen über das neue Projekt gesprochen.",
+    "Ich habe gestern mit Jonas und Ailin über das neue Projekt gesprochen."
+  ],
+  "20": ["Mach die Musik ein bisschen leiser."]
+}

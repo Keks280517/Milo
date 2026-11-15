@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "model": "gemma4:e4b",
+    "commands": "81/87",
+    "commandsAlwaysRight": "27/29",
+    "grounded": "12/12",
+    "percent": 94
+  },
+  "cases": [
+    {
+      "prompt": "In einer Viertelstunde muss ich los, sag mir Bescheid",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Timer zwei Minuten dreißig",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "stell n timer auf fünf minuten",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Erinnere mich um 18 Uhr ans Training",
+      "ok": 0,
+      "of": 3,
+      "fails": [
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":3600,\"label\":\"Training\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":3600,\"label\":\"Training\"}}]",
+        "[{\"index\":0,\"name\":\"set_timer\",\"arguments\":{\"duration_seconds\":3600,\"label\":\"Training\"}}]"
+      ]
+    },
+    {
+      "prompt": "Ich brauch mal den Taschenrechner",
+      "ok": 0,
+      "of": 3,
+      "fails": [
+        "Ich kann dir leider keinen Taschenrechner direkt öffnen. Möchtest du stattdessen etwas anderes tun, zum Beispiel eine We",
+        "Es tut mir leid, aber ich habe keinen Taschenrechner als direkt zugängliche Anwendung. Kann ich dir stattdessen bei etwa",
+        "Ich kann dir leider keinen Taschenrechner öffnen. Ich bin ein Desktop-Assistent und habe keinen direkten Zugriff auf all"
+      ]
+    },
+    {
+      "prompt": "Öffne den Explorer",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "öffne spotifei",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Kannst du mir kurz Discord launchen",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Starte Word und Excel",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Zeig mir die Seite von der Tagesschau",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Geh mal auf Gmail",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Spiel was auf YouTube ab, irgendwas mit Jazz",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Such bei YouTube Minecraft Tutorials raus",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Leiser bitte",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Mach weiter mit der Musik",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Das Lied davor nochmal",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Vergiss nicht: Mama hat am 3. November Geburtstag",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Speicher dir meine Schuhgröße, 44",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Schreib mir auf dass der Vermieter Herr Öztürk heißt",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wer ist aktuell Bundeskanzler?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wann kommt GTA 6 raus?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wie ist der aktuelle Bitcoin-Kurs?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Was läuft heute Abend im Fernsehen?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wie viel ist 17 mal 23?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Wie spät ist es?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Welcher Wochentag ist heute?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Erzähl mir einen kurzen Witz",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Was hältst du von Pizza?",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    },
+    {
+      "prompt": "Danke dir, das wars",
+      "ok": 3,
+      "of": 3,
+      "fails": []
+    }
+  ],
+  "grounded": [
+    {
+      "question": "Wie wird das Wetter morgen in Hamburg?",
+      "ok": 3,
+      "of": 3,
+      "answers": [
+        "Hallo! Morgen in Hamburg wird es voraussichtlich bewölkt mit anhaltendem Regen. Die Temperaturen liegen tagsüber bei 12 °C und nachts bei 7 °C.",
+        "Hallo! Morgen in Hamburg wird es voraussichtlich bewölkt mit anhaltendem Regen. Die Temperaturen liegen tagsüber bei etwa 12 °C und nachts bei 7 °C.",
+        "Hallo! Morgen in Hamburg wird es voraussichtlich 12 °C tagsüber und 7 °C nachts mit anhaltendem Regen und Wind aus West mit 25 km/h."
+      ]
+    },
+    {
+      "question": "Was kostet die RTX 5060 Ti gerade?",
+      "ok": 3,
+      "of": 3,
+      "answers": [
+        "Es tut mir leid, aber ich konnte gerade keinen aktuellen Preis für die RTX 5060 Ti finden. Möchtest du, dass ich nach einem anderen Modell suche oder eine allgemeine Preisspanne recherchiere?",
+        "Es tut mir leid, aber ich konnte gerade keinen aktuellen Preis für die RTX 5060 Ti finden. Möchtest du, dass ich nach einem anderen Modell suche oder eine allgemeine Preisspanne recherchiere?",
+        "Es tut mir leid, aber ich konnte gerade keinen aktuellen Preis für die RTX 5060 Ti finden. Möchtest du, dass ich nach einer anderen Grafikkarte suche oder eine allgemeine Preisspanne recherchiere?"
+      ]
+    },
+    {
+      "question": "Stell einen Timer auf 10 Minuten",
+      "ok": 3,
+      "of": 3,
+      "answers": [
+        "Hallo! Dein Timer ist auf 10 Minuten gestellt und endet um 16:40 Uhr. Lass mich wissen, wenn du noch etwas brauchst! 😊",
+        "Hallo! Dein Timer ist für 10 Minuten gestellt und endet um 16:40 Uhr. Lass mich wissen, wenn du noch etwas brauchst! 😊",
+        "Hallo! Der Timer ist auf 10 Minuten gestellt und endet um 16:40 Uhr. Lass mich wissen, wenn du noch etwas brauchst! 😊"
+      ]
+    },
+    {
+      "question": "Wer hat das Spiel gestern gewonnen, Dortmund oder Bayern?",
+      "ok": 3,
+      "of": 3,
+      "answers": [
+        "Der FC Bayern München hat das Spiel gestern mit 3:2 gegen Borussia Dortmund gewonnen.",
+        "Der FC Bayern München hat gestern mit 3:2 gegen Borussia Dortmund gewonnen.",
+        "Der FC Bayern hat gestern mit 3:2 gegen Borussia Dortmund gewonnen."
+      ]
+    }
+  ]
+}
