@@ -1,6 +1,8 @@
+<p align="center"><img src="src-tauri/icons/128x128@2x.png" width="128" alt="Milo"></p>
+
 # Milo
 
-**Ein persönlicher KI-Desktop-Assistent für Windows, der als „Dynamic Island“ oben am Bildschirm wohnt.**
+**Ein persönlicher KI-Desktop-Assistent für Windows, der als kleine Pille oben am Bildschirm wohnt, im Stil einer „Dynamic Island“.**
 
 Milo ist ein kleiner leuchtender Würfel in einer schwarzen Pille am oberen Bildschirmrand. Ein Klick, und die Insel klappt zu einem vollen Assistenten auf: Chat, Sprache, Wetter, Dateien, Notizen, Systemwerte, Timer und eine Live-Ansicht dessen, was Claude Code gerade tut. Milo denkt mit Google Gemini über deinen eigenen kostenlosen API-Schlüssel oder mit einer lokalen KI, die komplett auf deinem PC läuft. Alltagsbefehle wie Timer, Lautstärke oder Programme öffnen laufen sofort auf deinem PC, ganz ohne KI.
 
@@ -10,12 +12,12 @@ Milo ist ein kleiner leuchtender Würfel in einer schwarzen Pille am oberen Bild
 
 ## Highlights
 
-- **Dynamic-Island-Oberfläche.** Eine Pille, die nicht im Weg ist, auf Klick aufspringt, sich bei Vollbild-Programmen versteckt und Klicks rundherum durchlässt. Liquid-Glass-Optik mit Lichtbrechung und gleitender Linse.
+- **Insel-Oberfläche.** Eine Pille, die nicht im Weg ist, auf Klick aufspringt, sich bei Vollbild-Programmen versteckt und Klicks rundherum durchlässt. Glas-Optik mit Lichtbrechung und gleitender Linse.
 - **Ein Charakter mit eigenem Leben.** Milo hat Stimmungen, Gesten und kleine Abenteuer: eine Pflanze, die über die Tage wächst, Wetter von deinem Ort (Regen, Schnee, Wolken), Sterne und Glühwürmchen in der Nacht und kurze Spaziergänge über die Taskleiste.
-- **Sofort-Befehle.** Timer, Wecker, Erinnerungen, Lautstärke, Medientasten, Programme und Webseiten öffnen, Bildschirmfotos und „Was läuft gerade?“ funktionieren offline, ganz ohne KI.
+- **Sofort-Befehle.** Timer, Wecker, Erinnerungen, Lautstärke, Medientasten, Programme und Webseiten öffnen, Bildschirmfotos und „Was läuft gerade?“ laufen direkt auf deinem PC, ganz ohne KI (die meisten sogar offline).
 - **KI-Chat mit Werkzeugen.** Gemini (optional mit einem sehr schnellen Groq-Modell als Partner und Ersatz) kann Programme über mehrere Monitore öffnen und anordnen, Webseiten bedienen und lesen, mit Quellen im Netz recherchieren, **Word-Berichte** schreiben, deine Dateien lesen (PDF, Word, Excel, PowerPoint), Notizen verwalten und mehr.
 - **Lokale KI, wenn du willst.** Kein Google? Milo arbeitet mit [Ollama](https://ollama.com) oder [LM Studio](https://lmstudio.ai) und erkennt einen laufenden Server von selbst. Mit deiner Erlaubnis prüft Milo Prozessor, Arbeitsspeicher und Grafikkarte, empfiehlt ein passendes Modell, lädt es mit einem Klick herunter (Prozent und Restzeit stehen direkt in der Pille) und verbindet es danach von selbst. Ist Ollama installiert, läuft aber nicht, startet Milo es. Allein nutzen (nichts verlässt deinen PC) oder mit Gemini mischen: einfache Fragen lokal, schwere in der Cloud.
-- **Sprache, komplett lokal.** Push-to-Talk (`Strg + Alt + K`) oder das Aktivierungswort „Hey Milo“. Die Spracherkennung läuft auf deinem PC (Parakeet, optional Whisper). Ton wird nie gespeichert oder verschickt.
+- **Sprache, komplett lokal.** `Strg + Alt + K` drücken und sprechen oder das Aktivierungswort „Hey Milo“ sagen. Die Spracherkennung läuft auf deinem PC (Parakeet, optional Whisper). Ton wird nie gespeichert oder verschickt.
 - **Text-Werkzeuge überall.** Text in einem beliebigen Programm markieren, `Strg + Alt + T` drücken und Korrigieren, Förmlicher, Lockerer, Kürzer, Übersetzen, Zusammenfassen oder Erklären wählen. Das Ergebnis ersetzt die Markierung.
 - **Begleiter für Claude Code.** Live-Ansicht der Datei, die Claude gerade bearbeitet (mit Änderungen), Befehle, Aufgabenliste und letzte Nachricht. Freigaben erteilen oder ablehnen, Fragen und Pläne direkt in der Insel beantworten, 5-Stunden- und Wochenlimit sehen und mit `/claude` direkt aus Milo mit Claude chatten.
 - **Die Pille als Live-Anzeige.** Timer- und Countdown-Karten, anstehende Termine, Claude-Status, eine Uhr, Lautstärke per Mausrad sowie Hinweise zu Downloads, Zwischenablage, Akku und wenn Mikrofon oder Kamera benutzt werden.
@@ -57,6 +59,7 @@ Milo zählt seinen Verbrauch pro Minute, pro Tag und in Tokens. So weiß er vorh
 
 - Windows 11 (WebView2 ist dabei)
 - Ein kostenloser **Gemini-API-Schlüssel** von [Google AI Studio](https://aistudio.google.com/apikey) **oder** eine lokale KI mit [Ollama](https://ollama.com/download/windows) oder [LM Studio](https://lmstudio.ai) (ohne beides funktionieren nur Sofort-Befehle)
+- Zu Gemini: Du nutzt deinen eigenen API-Schlüssel und stimmst [Googles Gemini-API-Bedingungen](https://aistudio.google.com/docs/terms) zu, die ein Mindestalter von **18 Jahren** verlangen. In der kostenlosen Stufe darf Google deine Anfragen zur Verbesserung seiner Produkte nutzen, und Menschen können sie ansehen. Schicke deshalb keine sensiblen oder persönlichen Daten. Willst du lieber alles auf deinem PC behalten, nimm die lokale KI.
 - Optional: ein kostenloser **Groq-API-Schlüssel** von [console.groq.com/keys](https://console.groq.com/keys)
 - Optional: die Sprachmodelle (Parakeet, Whisper, Aktivierungswort) für die Spracheingabe
 
@@ -116,4 +119,10 @@ Eine Sicherheitslücke gefunden? Bitte privat melden, siehe [SECURITY.md](SECURI
 
 [MIT](LICENSE)
 
-Milo ist ein unabhängiges Projekt und steht in keiner Verbindung zu Anthropic, Google, Apple, Microsoft oder Twitch. Alle Produktnamen und Marken gehören ihren jeweiligen Inhabern.
+Milo nutzt Open-Source-Bausteine unter ihren eigenen Lizenzen (MIT, Apache-2.0, MPL-2.0 und weitere), aufgelistet in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Die Spracheingabe nutzt [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) mit NVIDIAs Parakeet-Modell (CC-BY-4.0) und optional OpenAIs Whisper (MIT); die Modelle sind nicht Teil dieses Repositorys.
+
+## Haftungsausschluss
+
+Milo ist ein unabhängiges Hobbyprojekt. Es steht in keiner Verbindung zu Apple, Google, Anthropic, Microsoft, Netflix, Twitch oder anderen hier genannten Firmen und wird von ihnen weder unterstützt noch gesponsert. Alle Produktnamen, Logos und Marken gehören ihren jeweiligen Inhabern und werden nur genannt, um zu beschreiben, womit Milo zusammenarbeitet. Das Insel-Design ist von bestehenden Designs inspiriert, nicht kopiert.
+
+Milo wird so bereitgestellt, wie es ist, ohne jede Gewährleistung (siehe [LICENSE](LICENSE)). Wenn du Milo Webseiten bedienen lässt, bist du selbst dafür verantwortlich, deren Nutzungsbedingungen einzuhalten. Für Cloud-KI-Dienste (wie Google Gemini oder Groq) mit deinem eigenen API-Schlüssel gelten deren Bedingungen und Preise.

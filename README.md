@@ -1,6 +1,8 @@
+<p align="center"><img src="src-tauri/icons/128x128@2x.png" width="128" alt="Milo"></p>
+
 # Milo
 
-**A personal AI desktop assistant for Windows that lives in a "Dynamic Island" at the top of your screen.**
+**A personal AI desktop assistant for Windows that lives in a small pill at the top of your screen, in the style of a "dynamic island".**
 
 Milo is a small glowing cube that lives in a black pill at the top edge of your screen. Click it and the island opens into a full assistant: chat, voice, weather, files, notes, system stats, timers and a live view of what Claude Code is doing. Milo thinks with Google Gemini using your own free API key, or with a local AI that runs entirely on your PC. Everyday commands like timers, volume or opening apps run instantly on your PC, without any AI.
 
@@ -10,12 +12,12 @@ Milo is a small glowing cube that lives in a black pill at the top edge of your 
 
 ## Highlights
 
-- **Dynamic Island UI.** A pill that stays out of your way, springs open on click, hides in fullscreen apps and lets clicks pass through around it. Liquid Glass styling with refraction and a sliding lens.
+- **Island-style UI.** A pill that stays out of your way, springs open on click, hides in fullscreen apps and lets clicks pass through around it. A glass look with refraction and a sliding lens.
 - **A character with a life of its own.** Milo has moods, gestures and little adventures: a plant that grows over the days, weather from your location (rain, snow, clouds), stars and fireflies at night, and short walks across your taskbar.
-- **Instant quick commands.** Timers, alarms, reminders, volume, media keys, opening apps and websites, screenshots and "what's playing?" all work offline, with no AI involved.
+- **Instant quick commands.** Timers, alarms, reminders, volume, media keys, opening apps and websites, screenshots and "what's playing?" run directly on your PC, with no AI involved (most of them even offline).
 - **AI chat with tools.** Gemini (with an optional, very fast Groq model as a partner and fallback) can open and arrange apps across monitors, browse and read web pages, research the web with sources, write **Word reports**, read your files (PDF, Word, Excel, PowerPoint), manage notes and more.
 - **Local AI, if you prefer.** Don't want to use Google? Milo works with [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai) and detects a running server by itself. With your permission it checks your processor, memory and graphics card and recommends a model that fits, which it downloads with one click (percentage and time left show right in the pill) and then connects by itself. If Ollama is installed but not running, Milo starts it. Use it on its own (nothing leaves your PC) or mix it with Gemini: simple questions locally, hard ones in the cloud.
-- **Voice, fully local.** Push-to-talk (`Ctrl + Alt + K`) or the wake word "Hey Milo". Speech recognition runs on your PC (Parakeet, optionally Whisper). Audio is never stored or sent anywhere.
+- **Voice, fully local.** Press `Ctrl + Alt + K` to talk, or use the wake word "Hey Milo". Speech recognition runs on your PC (Parakeet, optionally Whisper). Audio is never stored or sent anywhere.
 - **Text tools anywhere.** Select text in any app, press `Ctrl + Alt + T` and pick Fix, More formal, More casual, Shorter, Translate, Summarize or Explain. The result replaces your selection.
 - **Claude Code companion.** Live view of the file Claude is editing (with diffs), commands, task list and its last message. Approve or deny permission requests, answer Claude's questions and plans right from the island, see your 5-hour and weekly usage limits, and chat with Claude directly from Milo with `/claude`.
 - **The pill as a live display.** Timer and countdown cards, upcoming calendar events, Claude status, a clock, scroll to change volume, plus hints for downloads, clipboard, battery and when your microphone or camera is in use.
@@ -57,6 +59,7 @@ Milo counts its own usage per minute, per day and in tokens, so it knows ahead o
 
 - Windows 11 (WebView2 is included)
 - A free **Gemini API key** from [Google AI Studio](https://aistudio.google.com/apikey), **or** a local AI with [Ollama](https://ollama.com/download/windows) or [LM Studio](https://lmstudio.ai) (without either, only quick commands work)
+- About Gemini: you use your own API key and accept [Google's Gemini API terms](https://aistudio.google.com/docs/terms), which require you to be **18 or older**. On the free tier, Google may use your requests to improve its products and people may review them, so don't send sensitive or personal information. If you'd rather keep everything on your PC, use the local AI instead.
 - Optional: a free **Groq API key** from [console.groq.com/keys](https://console.groq.com/keys)
 - Optional: the speech models (Parakeet, Whisper, wake word) for voice input
 
@@ -116,4 +119,10 @@ Found a security problem? Please report it privately, see [SECURITY.md](SECURITY
 
 [MIT](LICENSE)
 
-Milo is an independent project and is not affiliated with or endorsed by Anthropic, Google, Apple, Microsoft or Twitch. All product names and trademarks belong to their respective owners.
+Milo uses open-source components under their own licenses (MIT, Apache-2.0, MPL-2.0 and others), listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Voice input uses [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) with NVIDIA's Parakeet model (CC-BY-4.0) and optionally OpenAI's Whisper (MIT); the models are not part of this repository.
+
+## Disclaimer
+
+Milo is an independent hobby project. It is not affiliated with, endorsed by or sponsored by Apple, Google, Anthropic, Microsoft, Netflix, Twitch or any other company mentioned here. All product names, logos and trademarks belong to their respective owners and are used only to describe what Milo works with. The island design is inspired by, not copied from, existing designs.
+
+Milo is provided "as is", without warranty of any kind (see [LICENSE](LICENSE)). When you let Milo control websites, you are responsible for following those websites' terms of use. Using cloud AI services (such as Google Gemini or Groq) with your own API key is subject to their terms and pricing.

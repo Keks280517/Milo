@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Liquid Glass: jede Glasflaeche bekommt eine eigene Linse in ihrer echten Groesse und Rundung.
+  // Glas: jede Glasflaeche bekommt eine eigene Linse in ihrer echten Groesse und Rundung.
   //
   // Die Linse ist ein SVG-Filter im backdrop-filter (WebView2/Chromium kann das): eine
   // Verschiebungskarte, die den Inhalt hinter dem Glas NUR im Randband bricht (zur Mitte hin, an der

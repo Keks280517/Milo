@@ -1,6 +1,6 @@
 /* Gemeinsame Grundlage fuer alle Fenster: Schrift, Raum, Radien, Hoehen, Glas und Bewegung.
  *
- * Glas nach Apples Liquid-Glass-Leitlinien: es ist die Ebene fuer Bedienelemente und Navigation,
+ * Glas als Ebene fuer Bedienelemente: es ist die Ebene fuer Bedienelemente und Navigation,
  * die ueber dem Inhalt schwebt (Leiste, Menues, Knoepfe), nicht der Inhalt selbst. Inhalt liegt
  * auf ruhigen, dunklen Flaechen. Glas ist klar statt milchig: es bricht den Inhalt nur am Rand
  * (GlassDefs.svelte rechnet die Linse je Form), traegt eine Glanzkante aus EINER Lichtrichtung
